@@ -18,6 +18,19 @@ public class MyHeap {
     if (index < 0 || index > size - 1) throw new IllegalArgumentException("The index given is not valid!") ;
     if (size < 0 || size > array.length - 1) throw new IllegalArgumentException("The size given is not valid!") ;
     //
+  }
+  /**
+  Purpose/goal:
+   convert the array into a valid heap. [ should be O(n) ]
+  **/
+  public static void heapify(int[] array) {
 
-   }
+  }
+  /**
+  Purpose/goal:
+     sort the array by converting it into a heap then removing the largest value n-1 times. [ should be O(nlogn) ]
+  **/
+  public static void heapsort(int[] array) {
+
+  }
 }
