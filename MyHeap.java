@@ -45,7 +45,9 @@ public class MyHeap {
    convert the array into a valid heap. [ should be O(n) ]
   **/
   public static void heapify(int[] array) {
-
+    for (int i = array.length - 1 ; i >= 0 ; i--) { // go backwards and start from end of array
+			pushDown(array, array.length, i) ;
+		}
   }
   /**
   Purpose/goal:
