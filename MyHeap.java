@@ -9,10 +9,68 @@ public class MyHeap {
     int[] e = {1,31,5,7,9,10} ;
     pushDown(e,3,0) ;
     System.out.println(Arrays.toString(e)) ; // should bring 31 up
-    */
     int[] a = {14, 52, 11, 772, 115, 7, 1, 9, 26, 72} ;
     heapsort(a) ;
-    System.out.println(Arrays.toString(a)) ;
+    System.out.println(Arrays.toString(a)) ;*/
+    // Mr. K's Driver
+    System.out.println("Size\t\tMax Value\theap/builtin ratio ");
+    int[]MAX_LIST = {1000000000,500,10};
+    for(int MAX : MAX_LIST){
+      for(int size = 31250; size < 2000001; size*=2){
+        long htime=0;
+        long btime=0;
+        //average of 5 sorts.
+        for(int trial = 0 ; trial <=5; trial++){
+          int []data1 = new int[size];
+          int []data2 = new int[size];
+          for(int i = 0; i < data1.length; i++){
+            data1[i] = (int)(Math.random()*MAX);
+            data2[i] = data1[i];
+          }
+          long t1,t2;
+          t1 = System.currentTimeMillis();
+          MyHeap.heapsort(data2);
+          t2 = System.currentTimeMillis();
+          htime += t2 - t1;
+          t1 = System.currentTimeMillis();
+          Arrays.sort(data1);
+          t2 = System.currentTimeMillis();
+          btime+= t2 - t1;
+          if(!Arrays.equals(data1,data2)){
+            System.out.println("FAIL TO SORT!");
+            System.exit(0);
+          }
+        }
+        System.out.println(size +"\t\t"+MAX+"\t"+1.0*htime/btime);
+      }
+      System.out.println();
+    }
+    /*Here are the results after running
+    Size		  Max Value	     heap/builtin ratio
+    31250		 1000000000	     0.5652173913043478
+    62500		 1000000000	     0.5454545454545454
+    125000	 1000000000	     1.8444444444444446
+    250000	 1000000000	     1.467741935483871
+    500000	 1000000000	     1.7130434782608697
+    1000000	 1000000000	     1.973856209150327
+    2000000	 1000000000	     2.4154013015184383
+
+    31250		    500	         0.6111111111111112
+    62500		    500	         1.3636363636363635
+    125000		  500	         2.8518518518518516
+    250000		  500	         3.24
+    500000		  500	         3.267326732673267
+    1000000		  500          3.497560975609756
+    2000000		  500	         4.178921568627451
+
+    31250		     10	            4.0
+    62500		     10	            5.0
+    125000	     10 	          9.0
+    250000		   10	            6.0
+    500000		   10	        6.3428571428571425
+    1000000		   10	            6.16
+    2000000		   10	        6.523809523809524
+    */
   }
   /**
   precondition index is between 0 and size-1 inclusive
