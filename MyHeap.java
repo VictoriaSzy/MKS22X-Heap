@@ -12,7 +12,7 @@ public class MyHeap {
     int[] a = {14, 52, 11, 772, 115, 7, 1, 9, 26, 72} ;
     heapsort(a) ;
     System.out.println(Arrays.toString(a)) ;*/
-    // Mr. K's Driver
+    /* Mr. K's Driver
     System.out.println("Size\t\tMax Value\theap/builtin ratio ");
     int[]MAX_LIST = {1000000000,500,10};
     for(int MAX : MAX_LIST){
@@ -44,7 +44,7 @@ public class MyHeap {
         System.out.println(size +"\t\t"+MAX+"\t"+1.0*htime/btime);
       }
       System.out.println();
-    }
+    }*/
     /*Here are the results after running
     Size		  Max Value	     heap/builtin ratio
     31250		 1000000000	     0.5652173913043478
