@@ -2,7 +2,7 @@ import java.util.* ;
 
 public class MyHeap {
   public static void main(String[] args) {
-    int[] a = {1,31,5,7,9,10} ;
+    /*int[] a = {1,31,5,7,9,10} ;
     pushDown(a,5,0) ;
     System.out.println(Arrays.toString(a)) ; // should bring 31 up
     System.out.println("We are now testing with size of 3!") ;
@@ -11,7 +11,7 @@ public class MyHeap {
     System.out.println(Arrays.toString(e)) ; // should bring 31 up
     int[] aa = {14, 52, 11, 772, 115, 7, 1, 9, 26, 72} ;
     heapsort(aa) ;
-    System.out.println(Arrays.toString(aa)) ;
+    System.out.println(Arrays.toString(aa)) ;*/
     /* Mr. K's Driver
     System.out.println("Size\t\tMax Value\theap/builtin ratio ");
     int[]MAX_LIST = {1000000000,500,10};
