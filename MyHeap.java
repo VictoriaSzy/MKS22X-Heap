@@ -20,7 +20,7 @@ public class MyHeap {
         long htime=0;
         long btime=0;
         //average of 5 sorts.
-        for(int trial = 0 ; trial <=5; trial++){
+        for(int trial = 0 ; trial <=5; trial++) {
           int []data1 = new int[size];
           int []data2 = new int[size];
           for(int i = 0; i < data1.length; i++){
